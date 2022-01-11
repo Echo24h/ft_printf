@@ -6,7 +6,7 @@
 /*   By: gborne <gborne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 18:17:20 by gborne            #+#    #+#             */
-/*   Updated: 2022/01/09 18:24:19 by gborne           ###   ########.fr       */
+/*   Updated: 2022/01/12 00:16:44 by gborne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_sort(va_list *arg, char type, int size)
 	else if (type == 'p')
 	{
 		size = ft_putstr("0x", size);
-		size = ft_puthexa(va_arg(*arg, unsigned int), "0123456789abcdef", size);
+		size = ft_puthexa(va_arg(*arg, uintptr_t), "0123456789abcdef", size);
 	}
 	else if (type == 'd' || type == 'i')
 		size = ft_putnbr(va_arg(*arg, int), size);
